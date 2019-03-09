@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Recommended",
+    "items": [ "Uttapa", "Idali Vada Samber" ],
+    "id": "01"
+  },
+	{"name":"South Indian", "items":["Uttapa","Idali Vada Samber"], "id":"02"},
+  {
+    "name": "Punjabi",
+    "items": [ "Chole Kulche", "Makke ki Roti Sarso da Sag" ],
+    "id": "03"
+  },
+  {
+    "name": "Hydrabadi",
+    "items": [ "Biryani", "Lemon Rice" ],
+    "id": "04"
+  },
+	{"name":"Maharashtrian", "items":["Vada Sambar","Poha","Tea"], "id":"05"}
+]

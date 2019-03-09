@@ -1,0 +1,32 @@
+
+/*=======================================
+Template Design By SantoshDhonde.
+========================================*/
+
+.scrollToTop {
+  background-color: #c762cb;  
+}
+.scrollToTop:hover {
+  background-color: #e07ce4;  
+}
+.productAddCart button.addToCart, .manageCart{line-height:40px; padding:0 20px; background:none; border:1px solid #c762cb; color:#c762cb; font-weight:700;}
+.btn-block.checkOut {background:#c762cb; color:#fff; border-radius:0;}
+.btn-block.checkOut:hover{box-shadow:0 2px 8px #d4d5d9; background:#e07ce4;}
+#paymentMethod .modal-footer .btn.proceedButton, #forgotPassword .modal-footer .btn.proceedButton {background:#c762cb; color:#fff; border-radius:0 0 5px 0;}
+#paymentMethod .modal-footer .btn.proceedButton:hover, #forgotPassword .modal-footer .btn.proceedButton:hover {background:#e07ce4;}
+.paymentOptions .icon-checked {color:#c762cb;}
+.icon-plus{color:#c762cb; font-size:28px; display:inline-block;margin:6px 0 0 10px;}
+.btn-primary{background:#c762cb;border:0 none;}
+.btn-primary:hover{background:#e07ce4;border:0 none;}
+.jumbotron h1, .jumbotron .h1{font-weight:300; color:#c762cb;}
+.navbar-primary {background:#c762cb;}
+.nav > li > a, .navbar-header a {color:#fff;}
+.menuPage .nav > li > a:hover, .menuPage .nav > li > a:focus, .menuPage .nav > li.active a,
+.orderPage .nav > li > a:hover, .orderPage .nav > li > a:focus, .orderPage .nav > li.active a
+{background:#e07ce4;}
+#startHotel.btn-default, #startHotel.btn-success{border:0 none; background:#c762cb; color:#fff;}
+#startHotel.btn-default:focus, #startHotel.btn-default.focus,
+#startHotel.btn-default:hover {background:#e07ce4;}
+/*=======================================
+Template Design By SantoshDhonde.
+========================================*/

@@ -1,0 +1,125 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/img/favicon.ico" type="image/x-icon">
+    <!-- Font awesome -->
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="~/assets/css/theme-color/default-theme.css" rel="stylesheet">
+    <!-- Main style sheet -->
+    <link href="~/assets/css/iconFont.css" rel="stylesheet">
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <!-- Prata for body  -->
+    <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+    <!-- Tangerine for small title -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <!-- Open Sans for title -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Robot for All -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="~/assets/js/jquery-3.1.0.slim.js"></script>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script type="text/javascript">
+        var orderId = sessionStorage.getItem('orderid');
+        var price = sessionStorage.getItem('price');
+        var address = sessionStorage.getItem('address');
+        if (orderId > 0) {
+            @{
+                ViewData["ThankYou"] = "Congratulations!";
+                ViewData["Title"] = "Your Order Id is sent to you on mail and via sms.";
+                ViewData["Message"] = "Our Delivery Team will reach you soon.";
+            }
+        }
+        else {
+            location.replace("error");
+        }
+        $(document).ready(function () {
+            $("#ViewOrder").click(function () {
+                if ($('#OrderId')[0].innerHTML.length == 0) {
+                    $("#details").show();
+                    $('#OrderId').html("Order Id: "+sessionStorage.getItem('orderid'));
+                    $('#Price').html("\nTotal Price: ₹" + sessionStorage.getItem('price'));
+                    $('#Address').html("\nDelivery Address: " + sessionStorage.getItem('address'));
+                    $('#ViewOrder')[0].innerHTML = "Click back to Hide Your Order Details";
+                }
+                else {
+                    $("#details").hide();
+                    $('#ViewOrder')[0].innerHTML = "Click here to view your Order Details";
+                    $('#OrderId').html("");
+                    $('#Price').html("");
+                    $('#Address').html("");
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="container mainSection">
+            <div class="jumbotron text-xs-center">
+                <h1 class="display-3"> @ViewData["ThankYou"]</h1>
+                <h2 class="display-3">@ViewData["Title"]</h2>
+                <p class="lead">@ViewData["Message"]</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-sm" id="ViewOrder" role="button" ">Click here to view your Order Details</a><br />
+                    <div id="details" class="col well" style="background-color:orange;display:none;width:30%">
+                        <span id="OrderId"></span><br />
+                        <span id="Price"></span><br />
+                        <span id="Address"></span>
+                    </div>
+                </p>
+            </div>
+            @*<div class="orderDetails">
+                    @*<h3>Your Order Details</h3>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-sm" id="ViewOrder" role="button">Click here to view your order</a>
+                        <span id="OrderId"></span>
+                    </p>
+                </div>*@
+        </div>
+    </section>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/assets/js/bootstrap.js"></script>
+    <script src="~/assets/js/custom.js"></script>
+    <script>
+        var options = {
+            "key": "rzp_test_1gE6SLnkHHnitJ",
+            "amount": "2000", // 2000 paise = INR 20
+            "name": "Cart4All",
+            "description": "test",
+            "image": "/assets/img/Cart4All.JPG",
+            "handler": function (response) {
+                alert(response.razorpay_payment_id);
+                console.log(response);
+            },
+            "prefill": {
+                "name": "Mayank",
+                "email": "mayank.gpt1@gmail.com"
+            },
+            "notes": {
+                "address": "Dombivli"
+            },
+            "theme": {
+                "color": "#F37254"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+
+        document.getElementById('rzp-button1').onclick = function (e) {
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

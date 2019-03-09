@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="~/assets/css/theme-color/default-theme.css?v=1.1" rel="stylesheet">
+    <!-- Main style sheet -->
+    <link href="~/assets/css/iconFont.css" rel="stylesheet">
+    <link href="~/assets/css/style.css?v=1.1" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-pincode-input.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <!-- Prata for body  -->
+    <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+    <!-- Tangerine for small title -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <!-- Open Sans for title -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Robot for All -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <script src="~/assets/js/jquery-3.1.0.slim.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="theme_style_switcher">
+        <div class="style-switch-button" style="display:none">
+            <i class="fa fa-cog fa-spin"></i>
+        </div>
+        <h4>Theme Color</h4>
+        <a id="default" href="https://markups.io/demo/osteriax/index.html#" title="Default Color"></a>
+        <a id="red" href="https://markups.io/demo/osteriax/index.html#" title="Red"></a>
+        <a id="blue" href="https://markups.io/demo/osteriax/index.html#" title="Blue"></a>
+        <a id="orange" href="https://markups.io/demo/osteriax/index.html#" title="Orange"></a>
+        <a id="pink" href="https://markups.io/demo/osteriax/index.html#" title="Pink"></a>
+        <a id="darkRed" href="https://markups.io/demo/osteriax/index.html#" title="Dark Red"></a>
+        <a id="purple" href="https://markups.io/demo/osteriax/index.html#" title="Purple"></a>
+        <!--<a id="green" href="https://markups.io/demo/osteriax/index.html#" title="Green"></a>
+        <a id="tan" href="https://markups.io/demo/osteriax/index.html#" title="Tan"></a>
+        <a id="violet" href="https://markups.io/demo/osteriax/index.html#" title="Violet"></a>-->
+    </div>
+
+    <!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- END SCROLL TOP BUTTON -->
+    <!-- Start header section -->
+    <header class="topSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo">
+                        <!--<img src="assets/img/logo.png"/>-->
+                    </div>
+                    <div class="banner-grads">
+                        <!--<div class="ratingsGrads">
+                            <div class="ratingCount">
+                                <i class="icon-favourite"></i>
+                                <span>4</span>
+                            </div>
+                            <div class="totalRating">
+                                <span>100+ Ratings</span>
+                            </div>
+                        </div>
+                        <div class="deliveryTimeGards">
+                            <div class="expTime">
+                                <span class="extTime">28</span><span class="extFormat">Mins</span>
+                            </div>
+                            <span>Delivery Time</span>
+                        </div>-->
+                        <div class="paymentOptionGards">
+                            <span>Online Payment test<span>&#124;</span> Cash On Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="searchContent">
+            <div class="container">
+                <div class="row text-center">
+
+                    @*<div class="searchArea">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="text" class="searchInput" placeholder="Search" />
+                        </div>*@
+
+                    <div class="onlyVeg">
+                        <a class="btn onlyVegBtn">Pure Veg <i class="icon-squer"></i></a>
+                    </div>
+                    <div class="NonVeg">
+                        <a class="btn NonVegBtn">Non Veg <i class="icon-squer"></i></a>
+                    </div>
+                    <div class="Eggetarian">
+                        <a class="btn EggBtn">Contains Egg<i class="icon-squer"></i></a>
+                    </div>
+
+                    <!--<div class="btn-group foodType">
+                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span>Select Food Type</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Veg</a></li>
+                        <li><a href="#">Nonveg</a></li>
+                        <li><a href="#">Veg-Nonveg</a></li>
+                    </ul>
+                    </div>-->
+                    <!--<div class="fav-btn">
+                    <button class="btn favButton">
+                    <i class="icon-favourite"></i>
+                    <span class="favList">Favourite</span>
+                    </button>
+                    </div>-->
+
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- End header section -->
+    <section>
+        <div class="container mainSection">
+            <div class="mobileMenu">
+                <i class="glyphicon glyphicon-menu-hamburger"></i>Menu
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="productList">
+                        <ul class="accordion text-right"></ul>
+                    </div>
+                </div>
+                <div class="col-md-7 pList">
+                    <div class="viewList">
+                        <div class="viewListHeader">                            
+                        </div>
+                        @{
+                            @Html.Partial("FoodItems");
+                        }
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cartList">
+                        <h2>Cart</h2>
+                        <div class="emptyCart text-center"> Your Cart is Empty</div>
+                        <div class="cartListItems"></div>
+                        <div class="cartTotal">
+                            <div class="subTotal">
+                                Subtotal
+                                <div class="pull-right subTotalPrice">&#x20b9 <span></span></div>
+                                <div class="w-100 extraCharge">Delivery Charges <span class="pull-right deliveryCharges">50</span></div>
+                            </div>
+                            <a class="btn btn-lg btn-block checkOut" data-toggle="modal" data-target="#paymentMethod"><i class="icon-cart"></i>Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <template id="product-template" style="display:none;">
+        <div class="product col-md-6" id="product{{Id}}">
+            <div class="productImage">
+                <img src="{{imageUrl}}" />
+            </div>
+            <div class="productNameArea">
+                <div class="productName">
+                    <h4><i class="icon-foodCheck {{type}}"></i><span>{{name}}</span></h4>
+                </div>
+                <div class="productType">
+                    <span>{{quality}}</span>
+                </div>
+                <div class="productCostArea">
+                    <div class="productPrice">&#x20b9 <span>{{price}}</span></div>
+                    <div class="productAddCart">
+                        <button class="addToCart">Add</button>
+                        <div class="manageCart">
+                            <a href="javascript:void(0)" class="minusItem"><i class="icon-minus"></i></a>
+                            <span class="itemCount"></span>
+                            <a href="javascript:void(0)" class="plusItem"><i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="cartListTemplate">
+        <div class="productInCart" id="cart{{id}}">
+            <h5><i class="{{type}}"></i><span class="itemName">{{name}}</span></h5>
+            <div class="productPrice">&#x20b9 <span>{{price}}</span></div>
+            <div class="productAddCart">
+                <div class="manageCart">
+                    <a href="javascript:void(0)" class="minusItemCart"><i class="icon-minus"></i></a>
+                    <span class="itemCountCart">{{totalItem}}</span>
+                    <a href="javascript:void(0)" class="plusItemCart"><i class="icon-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- The Modal -->
+    <div class="modal" id="paymentMethod">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h2 class="modal-title">Payment Method</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group col-md-6">
+                            <label for="cName">Name</label>
+                            <input type="text" autocomplete="off" class="form-control" id="cName">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cEmail">Email address</label>
+                            <input type="email" autocomplete="off" class="form-control" id="cEmail">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cPhoneNumber">Phone Number</label>
+                            <input type="number" autocomplete="off" class="form-control" id="cPhoneNumber">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cArea">Area</label>
+                            <select class="form-control" id="cArea">
+                                <option>Lodha Casa bella</option>
+                                <option>Lodha Casa bella Gold</option>
+                                <option>Lodha Casa Rio</option>
+                                <option>Lodha Casa Rio Gold</option>
+                                <option>Lakeshore Greens Palava</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="cAddress">Address</label>
+                            <textarea class="form-control" autocomplete="off" id="cAddress" rows="3"></textarea>
+                        </div>
+                        <div class="form-group col-md-12 paymentOptions">
+                            <div class="w-100 paytm"><i class="icon-check"></i><span>Paytm</span></div>
+                            <div class="w-100 cod"><i class="icon-check"></i><span>Cash on delivery</span></div>
+                            <button type="button" class="btn btn-success" onclick="RazorPay()">Pay with RazorPay</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn cancel" data-dismiss="modal">Cancel</button>
+                    <a onclick="Payment()" class="btn proceedButton">Proceed</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="OTP" style="display: none; padding-left: 17px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div>
+                        <h6 class="modal-title">Please enter 6 digit OTP</h6>
+                        <div class="pincode-input-container">
+                            <input type="text" id="1st" maxlength="1" autocomplete="off" class="form-control pincode-input-text first" onkeyup="moveOnMax(this,'a')">
+                            <input type="text" id="a" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid" onkeyup="moveOnMax(this,'b')">
+                            <input type="text" id="b" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid" onkeyup="moveOnMax(this,'c')">
+                            <input type="text" id="c" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid" onkeyup="moveOnMax(this,'d')">
+                            <input type="text" id="d" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid" onkeyup="moveOnMax(this,'e')">
+                            <input type="text" id="e" maxlength="1" autocomplete="off" class="form-control pincode-input-text last">
+                            <div id="codeError" class="text-danger pincode-input-error" style="display:none">I'm sorry, but the code not correct</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" id="otpCancel" class="btn cancel" onclick="closeOTPBox()">Cancel</button>
+                    <a id="aVerifyOTP" class="btn proceedButton">Verify OTP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Footer -->
+    @Html.Partial("~/Views/Shared/Footer.cshtml")
+    <!-- End Footer -->
+    <!-- jQuery library -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/assets/js/bootstrap.js"></script>
+    <!-- Application js -->
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <!-- Custom js -->
+    <script src="~/assets/js/custom.js"></script>
+    <!-- Mustache js for repeat anything easy way-->
+    <script src="~/assets/js/mustache.min.js"></script>
+    <input type="hidden" id="EncryptedOTP" value="">
+</body>
+</html>
+<script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent) {
+        window.parent.parent.postMessage(["resultsFrame", {
+            height: document.body.getBoundingClientRect().height,
+            slug: ""
+        }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+</script>
